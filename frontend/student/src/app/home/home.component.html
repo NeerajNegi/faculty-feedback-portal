@@ -1,0 +1,51 @@
+<app-topnav></app-topnav>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<h4>Write a Feedback</h4>
+			<form>
+		        <div class="login-form col-md-offset-3 col-md-9">
+		            <div class="row">
+		                <div class="md-form input-field col-md-12" *ngIf="coursesFound">
+		                	<select class="" name="course" [(ngModel)]="course">
+				            <option *ngFor="let course of courses" (click)="showCourse()"
+				              [selected]="course.courseName == 'Select College'" [value]="course.courseId">{{course.courseName}}
+				          	</option>
+            				</select>
+		                </div>
+		                <p *ngIf="coursesFound == false">You are not enrolled in any course</p>
+		            </div>
+		            <!--
+		            <div class="row" *ngIf="selectedCourse.courseName !== 'Select College'">
+		            	<h4><strong>Faculty: </strong>{{ selectedCourse.faculty }}</h4>
+		            	<p><strong>Course Code: </strong>{{ selectedCourse.courseId }}</p>
+		            </div>
+		        	-->
+		            <div class="row">
+		                <div class="md-form input-field col-md-12">
+		                	<textarea [(ngModel)]="feedback" name="feedback" type="text" id="feedback" class="md-textarea md-textarea-auto form-control" mdbInputDirective></textarea>
+    						<label for="feedback">Write here...</label>
+		                </div>
+		            </div>
+		            <div class="row">
+		                <div class="col-md-6" style="margin: 0 auto;">
+		                    <button type="submit" (click)="submitFeedback()" class="btn btn-primary btn-login col-md-12">Submit</button>
+		                </div>
+		            </div>
+		        </div>
+		    </form>
+		</div>
+		<div class="col-md-4 submissions-wrapper">
+			<h4><strong>Previous Submissions</strong></h4>
+			<p *ngIf="feedbacks.length == 0" style="text-align: left;"> 
+				You have not posted any feedback
+			</p>
+			<div *ngIf="feedbacks.length > 0" class="submissions">
+			    <div *ngFor="let feedback of feedbacks" class="submission-content">
+			    	<h5><strong>Subject Code:</strong> {{ feedback.courseId }}</h5>
+			    	<p><strong>Feedback:</strong> {{ feedback.feedback }}</p>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>

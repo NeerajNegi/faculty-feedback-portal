@@ -1,0 +1,55 @@
+<app-topnav></app-topnav>
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 submissions-wrapper">
+			<h4><strong>Faculty List</strong></h4>
+			<p *ngIf="facultys.length == 0" style="text-align: left;"> 
+				No facultys yet.
+			</p>
+			<div *ngIf="facultys.length > 0" class="submissions">
+			    <div *ngFor="let faculty of facultys" class="submission-content">
+			    	<h5><strong>Faculty Name:</strong> {{ faculty.fullname }}</h5>
+			    	<p><strong>Courses:</strong></p>
+			    	<p *ngFor="let course of faculty.courses">
+			    		{{course}}
+			    	</p>
+			    </div>
+			</div>
+		</div>
+		<div class="col-md-3 submissions-wrapper">
+			<h4><strong>Feedback List</strong></h4>
+			<p *ngIf="feedbacks.length == 0" style="text-align: left;"> 
+				No feedbacks yet.
+			</p>
+			<div *ngIf="feedbacks.length > 0" class="submissions">
+			    <div *ngFor="let feedback of feedbacks" class="submission-content">
+			    	<h5><strong>Course Id:</strong> {{ feedback.courseId }}</h5>
+			    	<p><strong>Feedback:</strong> {{ feedback.feedback }}</p>
+			    </div>
+			</div>
+		</div>
+		<div class="col-md-3 submissions-wrapper">
+			<h4><strong>Courses List</strong></h4>
+			<p *ngIf="courses.length == 0" style="text-align: left;"> 
+				No courses yet.
+			</p>
+			<div *ngIf="courses.length > 0" class="submissions">
+			    <div *ngFor="let course of courses" class="submission-content">
+			    	<h5><strong>Course Name:</strong> {{ course.courseName }}</h5>
+			    </div>
+			</div>
+		</div>
+		<div class="col-md-3 submissions-wrapper">
+			<h4><strong>Student List</strong></h4>
+			<p *ngIf="students.length == 0" style="text-align: left;"> 
+				No students yet.
+			</p>
+			<div *ngIf="students.length > 0" class="submissions">
+			    <div *ngFor="let student of students" class="submission-content">
+			    	<h5><strong>Student Name:</strong> {{ student.fullname }}</h5>
+			    	<p><strong>Student Email:</strong> {{ student.email }}</p>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>

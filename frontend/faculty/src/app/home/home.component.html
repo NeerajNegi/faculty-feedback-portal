@@ -1,0 +1,14 @@
+<app-topnav></app-topnav>
+<div class="container">
+	<h1>Feedbacks</h1>
+	<div style="margin-top: 10px;" class="row" *ngFor="let feedback of feedbacks">
+		<div class="col-md-10">
+			<h4><strong>Course Code: </strong>{{ feedback.courseId }}</h4>
+			
+				<div class="col-md-10">
+					<p><strong>Feedback: </strong>{{ feedback.feedback }}</p>
+				</div>
+			
+		</div>
+	</div>
+</div>
