@@ -1,4 +1,4 @@
 module.exports = {
-    'secret': 'keepitsecret',
-    'database': 'mongodb://neerajnegi174:yeschidori@ds247439.mlab.com:47439/feedback_geu'
+    'secret': 'your_own_secret',
+    'database': 'your_database_link'
 };
