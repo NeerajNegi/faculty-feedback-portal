@@ -1,4 +1,4 @@
-# faculty-feedback-portal
+# Faculty-Feedback-Portal
 1. Faculty Feedback portal where students can post feedbacks for the faculties.
 2. Separate views for student, faculty and admin.
 
