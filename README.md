@@ -25,3 +25,7 @@
 5. From frontend/faculty run 'ng serve --port=4400'
 
 
+### More functionalities to be added
+1. Faculty request for student details if feedback contains strong language.
+2. Admin can form custom feedback questions.
+
