@@ -8,10 +8,12 @@
 3. Can view previous posted feedbacks.
 
 ## Faculty App
-1. Faculty can view the feedback posted by student.
+1. Faculty can login/signup
+2. Faculty can view the feedback posted by student.
 
 ## Admin App
-1. Admin dashboard contains list of students, faculty and Feedbacks.
+1. Admin can login/signup
+2. Admin dashboard contains list of students, faculty and Feedbacks.
 
 ## How to run?
 1. Clone the repository
